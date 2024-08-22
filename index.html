@@ -1,1 +1,245 @@
-<h1> Hello I'm Jin Guang </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Bieber Fanpage</title>
+    <style>
+        /* Import Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+        /* General Styles */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            color: #333;
+        }
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(to right, #ff5f6d, #ffc371);
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Navigation Bar Styling */
+        nav {
+            background-color: #ff5f6d;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline-block;
+        }
+        nav ul li a {
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: background 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: #ffc371;
+        }
+
+        /* Container and Text Block Styling */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+        .text-block {
+            background-color: #fff;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            font-size: 1.1em;
+            line-height: 1.8em;
+            color: #555;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .text-block:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        .text-block h2 {
+            margin-top: 0;
+            color: #ff5f6d;
+        }
+
+        /* Gallery Styling */
+        .hover-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .hover-gallery img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .hover-gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        .gallery-item {
+            flex: 1 1 calc(33.333% - 20px);
+            box-sizing: border-box;
+        }
+
+        /* Lightbox Styling */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .lightbox-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .lightbox-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+        footer p {
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .text-block {
+                padding: 20px;
+            }
+            .hover-gallery img {
+                width: 100%;
+                height: 200px;
+            }
+            nav ul li {
+                display: block;
+                text-align: center;
+            }
+            nav ul li a {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Justin Bieber Fanpage</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Photos</a></li>
+        <li><a href="#">Videos</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <div class="text-block">
+        <h2>About Justin</h2>
+        <p>
+            Justin Bieber, born on March 1, 1994, in London, Ontario, Canada, is a Canadian singer and songwriter who rose to fame as a teen idol. Discovered by talent manager Scooter Braun through YouTube videos in 2008, Bieber quickly gained popularity with his debut EP My World in 2009, followed by his first full-length album My World 2.0 in 2010.
+        </p>
+        <p>
+            Bieber’s music career has been marked by several successful albums, including Believe (2012), Purpose (2015), and Justice (2021). He is known for hit singles like “Baby,” “Sorry,” and “Love Yourself.” Over the years, Bieber has experimented with various musical styles, including pop, R&B, and EDM.
+        </p>
+        <p>
+            Despite facing controversies and legal issues in the early 2010s, Bieber has continued to evolve as an artist and remains a significant figure in the music industry. He is married to Hailey Baldwin since 2018.
+        </p>
+    </div>
+
+    <h2 style="text-align: center; color: #ff5f6d;">Photo Gallery</h2>
+    <div class="hover-gallery">
+        <div class="gallery-item"><img src="justin1.jpg" alt="Photo 1" onclick="openLightbox('justin1.jpg')"></div>
+        <div class="gallery-item"><img src="justin2.jpg" alt="Photo 2" onclick="openLightbox('justin2.jpg')"></div>
+        <div class="gallery-item"><img src="justin3.jpg" alt="Photo 3" onclick="openLightbox('justin3.jpg')"></div>
+        <div class="gallery-item"><img src="justin4.jpg" alt="Photo 4" onclick="openLightbox('justin4.jpg')"></div>
+        <div class="gallery-item"><img src="justin5.jpg" alt="Photo 5" onclick="openLightbox('justin5.jpg')"></div>
+        <div class="gallery-item"><img src="justin6.jpg" alt="Photo 6" onclick="openLightbox('justin6.jpg')"></div>
+    </div>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="Lightbox Image">
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Justin Bieber Fanpage. All Rights Reserved.</p>
+</footer>
+
+<script>
+    function openLightbox(imageSrc) {
+        document.getElementById('lightbox-img').src = imageSrc;
+        document.getElementById('lightbox').style.display = 'block';
+    }
+
+    function closeLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
