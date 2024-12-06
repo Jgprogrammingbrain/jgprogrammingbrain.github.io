@@ -14,5 +14,5 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
-  base: './' // Changed to relative path
+  base: '/jgprogrammingbrain.github.io/' // Changed to relative path
 })
