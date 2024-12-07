@@ -54,13 +54,13 @@
 
             <!-- Core Concepts -->
             <div v-if="activeSection === 'core'">
-              <h3 class="text-xl text-[#DB3DCF] mb-2">Core Example</h3>
+              <h3 class="text-xl text-[#DB3DCF] mb-2">Example</h3>
               <pre class="bg-[#0A0A1F] p-4 rounded text-sm overflow-auto">{{ coreCodeSnippet }}</pre>
             </div>
 
             <!-- Advanced Features -->
             <div v-if="activeSection === 'advanced'">
-              <h3 class="text-xl text-[#DB3DCF] mb-2">Computed Property</h3>
+              <h3 class="text-xl text-[#DB3DCF] mb-2">Computed Property Example</h3>
               <pre class="bg-[#0A0A1F] p-4 rounded text-sm overflow-auto">{{ advancedCodeSnippet }}</pre>
             </div>
 
@@ -109,32 +109,53 @@
               </div>
             </div>
 
-            <!-- Form Demo for Advanced Section -->
-            <form v-if="activeSection === 'advanced'" @submit.prevent="submitForm" class="space-y-4">
-              <input
-                type="text"
-                v-model="formData.name"
-                placeholder="Name"
-                class="w-full p-2 bg-[#1A1A3A] rounded text-[#D0CCE3] border border-[#DB3DCF]/30"
-              />
-              <input
-                type="email"
-                v-model="formData.email"
-                placeholder="Email"
-                class="w-full p-2 bg-[#1A1A3A] rounded text-[#D0CCE3] border border-[#DB3DCF]/30"
-              />
-              <textarea
-                v-model="formData.message"
-                placeholder="Your message"
-                class="w-full p-2 bg-[#1A1A3A] rounded text-[#D0CCE3] border border-[#DB3DCF]/30 h-32"
-              ></textarea>
-              <button
-                type="submit"
-                class="w-full p-2 bg-[#DB3DCF] text-white rounded hover:bg-[#DB3DCF]/80 transition-colors"
-              >
-                Submit
-              </button>
-            </form>
+            <!-- Advanced Form Demo -->
+            <div v-if="activeSection === 'advanced'" class="space-y-4">
+              <form @submit.prevent="submitForm" class="space-y-4">
+                <div>
+                  <label class="block text-[#D0CCE3] mb-2">First Name</label>
+                  <input
+                    v-model="formData.firstName"
+                    type="text"
+                    placeholder="Enter first name"
+                    class="w-full p-2 bg-[#1A1A3A] rounded text-[#D0CCE3] border border-[#DB3DCF]/30"
+                  />
+                </div>
+                
+                <div>
+                  <label class="block text-[#D0CCE3] mb-2">Last Name</label>
+                  <input
+                    v-model="formData.lastName"
+                    type="text"
+                    placeholder="Enter last name"
+                    class="w-full p-2 bg-[#1A1A3A] rounded text-[#D0CCE3] border border-[#DB3DCF]/30"
+                  />
+                </div>
+                
+                <div>
+                  <label class="block text-[#D0CCE3] mb-2">Email</label>
+                  <input
+                    v-model="formData.email"
+                    type="email"
+                    placeholder="Enter email"
+                    class="w-full p-2 bg-[#1A1A3A] rounded text-[#D0CCE3] border border-[#DB3DCF]/30"
+                  />
+                </div>
+                
+                <button
+                  type="submit"
+                  class="w-full p-2 bg-[#DB3DCF] text-white rounded hover:bg-[#DB3DCF]/80 transition-colors"
+                >
+                  Submit
+                </button>
+              </form>
+
+              <div v-if="submittedProfile" class="mt-4 bg-[#1A1A3A] p-4 rounded">
+                <h3 class="text-xl text-[#DB3DCF] mb-2">Profile Details</h3>
+                <p><strong>Full Name:</strong> {{ fullName }}</p>
+                <p><strong>Email:</strong> {{ formData.email }}</p>
+              </div>
+            </div>
 
             <!-- Core Concepts Demo -->
             <div v-if="activeSection === 'core'" class="space-y-4">
@@ -143,7 +164,7 @@
                   Reactive Data Binding
                 </h3>
                 <p class="text-[#D0CCE3] mb-2">
-                  Vue's reactivity in action:
+                  Increment Counter
                 </p>
                 <div class="flex items-center space-x-4">
                   <span class="text-[#D0CCE3]">Counter:</span>
@@ -151,7 +172,7 @@
                     @click="incrementCounter"
                     class="bg-[#DB3DCF] px-3 py-1 rounded mr-2"
                   >
-                    Increment
+                    + 1
                   </button>
                   <span class="text-white">{{ counter }}</span>
                 </div>
@@ -177,7 +198,7 @@ export default {
         },
         advanced: {
           title: 'Advanced Vue Features',
-          description: 'Powerful techniques for complex applications'
+          description: 'Dynamic form handling and computed properties'
         },
         components: {
           title: 'Vue Components',
@@ -190,10 +211,11 @@ export default {
         { id: 3, name: 'Practice Axios', completed: false }
       ],
       formData: {
-        name: '',
-        email: '',
-        message: ''
+        firstName: '',
+        lastName: '',
+        email: ''
       },
+      submittedProfile: false,
       coreCodeSnippet: `const app = Vue.createApp({
   data() {
     return { message: 'Hello Vue!' }
@@ -221,6 +243,11 @@ export default {
 })`
     }
   },
+  computed: {
+    fullName() {
+      return `${this.formData.firstName} ${this.formData.lastName}`.trim()
+    }
+  },
   methods: {
     incrementCounter() {
       this.counter++
@@ -235,13 +262,12 @@ export default {
       }
     },
     submitForm() {
-      // Simple form submission logic
-      console.log('Form submitted', this.formData)
-      // Reset form after submission
-      this.formData = {
-        name: '',
-        email: '',
-        message: ''
+      // Basic validation before submission
+      if (this.formData.firstName && this.formData.lastName && this.formData.email) {
+        this.submittedProfile = true
+        console.log('Form submitted', this.formData)
+      } else {
+        alert('Please fill out all form fields')
       }
     }
   }

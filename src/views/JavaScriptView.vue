@@ -54,16 +54,6 @@
 import { ref, h } from 'vue'
 
 // Custom SVG Icons
-const BookIcon = () => h('svg', { 
-  xmlns: 'http://www.w3.org/2000/svg', 
-  viewBox: '0 0 24 24', 
-  fill: 'none', 
-  stroke: 'currentColor', 
-  class: 'w-8 h-8 text-[#DB3DCF]'
-}, [
-  h('path', { d: 'M4 19.5A2.5 2.5 0 0 1 6.5 17H20' }),
-  h('path', { d: 'M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z' })
-])
 
 const CodeIcon = () => h('svg', { 
   xmlns: 'http://www.w3.org/2000/svg', 
@@ -107,7 +97,7 @@ const activeSection = ref('basics')
 // Sections content
 const sections = {
   basics: {
-    icon: BookIcon,
+    icon: BarChartIcon,
     title: "JavaScript Fundamentals",
     content: () => h('div', { class: "grid grid-cols-1 md:grid-cols-2 gap-4 text-[#D0CCE3]" }, [
       h('div', [
@@ -122,6 +112,15 @@ let isStudent = true;    // Boolean
 function greet(name) {
   return \`Hello, \${name}!\`;
 }`)
+      ]), h('div', [
+        h('h3', { class: "text-xl font-bold text-white mb-3" }, "Functional Programming"),
+        h('pre', { class: "bg-[rgba(103,95,242,0.1)] p-4 rounded-lg text-sm" }, `
+// Arrow Functions
+const double = x => x * 2;
+
+// Higher Order Functions
+const numbers = [1, 2, 3, 4];
+const squared = numbers.map(x => x ** 2);`)
       ]),
       h('div', [
         h('h3', { class: "text-xl font-bold text-white mb-3" }, "Control Structures"),
@@ -191,35 +190,6 @@ axios.get('/api/users')
   });`)
       ]),
       h('div', [
-        h('h3', { class: "text-xl font-bold text-white mb-3" }, "JSON Handling"),
-        h('pre', { class: "bg-[rgba(103,95,242,0.1)] p-4 rounded-lg text-sm" }, `
-// JSON Parsing
-const userData = {
-  "name": "Jin Guang",
-  "skills": ["JavaScript", "Vue", "Python", "CSS"],
-  "experience": null
-};
-
-// Convert to string
-const jsonString = JSON.stringify(userData);`)
-      ])
-    ])
-  },
-  advanced: {
-    icon: BarChartIcon,
-    title: "Advanced Techniques",
-    content: () => h('div', { class: "grid grid-cols-1 md:grid-cols-2 gap-4 text-[#D0CCE3]" }, [
-      h('div', [
-        h('h3', { class: "text-xl font-bold text-white mb-3" }, "Functional Programming"),
-        h('pre', { class: "bg-[rgba(103,95,242,0.1)] p-4 rounded-lg text-sm" }, `
-// Arrow Functions
-const double = x => x * 2;
-
-// Higher Order Functions
-const numbers = [1, 2, 3, 4];
-const squared = numbers.map(x => x ** 2);`)
-      ]),
-      h('div', [
         h('h3', { class: "text-xl font-bold text-white mb-3" }, "Promises & Async/Await"),
         h('pre', { class: "bg-[rgba(103,95,242,0.1)] p-4 rounded-lg text-sm" }, `
 // Async Function
@@ -231,6 +201,19 @@ async function fetchData() {
     console.error(error);
   }
 }`)
+      ]),
+      h('div', [
+        h('h3', { class: "text-xl font-bold text-white mb-3" }, "JSON Handling"),
+        h('pre', { class: "bg-[rgba(103,95,242,0.1)] p-4 rounded-lg text-sm" }, `
+// JSON Parsing
+const userData = {
+  "name": "Jin Guang",
+  "skills": ["JavaScript", "Vue", "Python", "CSS"],
+  "experience": null
+};
+
+// Convert to string
+const jsonString = JSON.stringify(userData);`)
       ])
     ])
   }

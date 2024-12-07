@@ -98,7 +98,6 @@ const cssCheatsheet = [
       { name: 'Element', code: 'p { }' },
       { name: 'ID', code: '#myId { }' },
       { name: 'Class', code: '.myClass { }' },
-      { name: 'Multiple', code: 'h1, h2 { }' }
     ]
   }
 ]
@@ -114,7 +113,7 @@ const bootstrapCheatsheet = [
   {
     title: 'Buttons',
     content: [
-      { name: 'Button Styles', code: '<button class="btn btn-primary">Primary</button>\n<button class="btn btn-success">Success</button>' },
+      { name: 'Button Styles', code: '<button class="btn btn-primary">Primary</button>' },
       { name: 'Button Group', code: '<div class="btn-group">\n  <button class="btn btn-primary">1</button>\n  <button class="btn btn-primary">2</button>\n</div>' }
     ]
   }

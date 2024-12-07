@@ -36,7 +36,7 @@
         <!-- Personal Description Section -->
         <div class="max-w-4xl mx-auto text-center mb-8 px-4 animate-fadeIn">
           <p class="text-lg text-[#D0CCE3] opacity-80 leading-relaxed">
-            Hi, my name is Jin Guang. I am a dedicated Year 3 Information Systems student from Singapore Management University (SMU) passionate about building and exploring innovative technologies. 
+            Hi, my name is Jin Guang. I am a dedicated Year 3 Information Systems student from Singapore Management University (SMU), passionate about building and exploring innovative technologies. 
             I was studying computer science for my first two years of university but I find where 
             I find myself making the most impact to be towards building user-centric applications. 
             My developer portfolio highlights my expertise in web development. With hands-on experience in programming languages like CSS, JavaScript, and frameworks such as Vue.js. 
@@ -209,14 +209,14 @@ const projects = ref([
 {
   id: 1,
   title: 'CSS',
-  description: 'Explore a collection of advanced CSS techniques and responsive designs',
+  description: 'A collection of CSS techniques and responsive designs using Bootstrap',
   link: '/css',
   backgroundImage: cssImage
 },
 {
   id: 2,
   title: 'JavaScript',
-  description: 'Interactive demos and complex JavaScript algorithmic solutions',
+  description: 'Basic JavaScript structures and interactive demos',
   link: '/javascript',
   backgroundImage: jsImage
 },
