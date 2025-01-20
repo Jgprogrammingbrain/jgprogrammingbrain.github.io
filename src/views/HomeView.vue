@@ -29,7 +29,7 @@
         <!-- Header -->
         <div class="text-center mb-8 animate-fadeIn">
           <span class="text-3xl sm:text-[2.5rem] lg:text-[3.5rem] mb-2 text-[#DB3DCF] font-black tracking-tight">
-          My Developer Portfolio (IS216) - Jin Guang
+          My Developer Portfolio - Jin Guang
           </span>
         </div>
 
