@@ -29,7 +29,7 @@
         <!-- Header -->
         <div class="text-center mb-8 animate-fadeIn">
           <span class="text-3xl sm:text-[2.5rem] lg:text-[3.5rem] mb-2 text-[#DB3DCF] font-black tracking-tight">
-          My Developer Portfolio - Jin Guang
+          My Developer Portfolio (IS216) - Jin Guang
           </span>
         </div>
 
@@ -42,6 +42,13 @@
             My developer portfolio highlights my expertise in web development. With hands-on experience in programming languages like CSS, JavaScript, and frameworks such as Vue.js. 
             I strive to create dynamic and responsive applications and I am continually expanding my skills to bridge the gap 
             between my innovative ideas and building impactful solutions.
+          </p>
+        </div>
+
+                <!-- Personal Description Section -->
+        <div class="max-w-4xl mx-auto text-center mb-8 px-4 animate-fadeIn">
+          <p class="text-lg text-[#D0CCE3] opacity-80 leading-relaxed">
+            This page details my learning from the module IS216 Web Application Development 2:
           </p>
         </div>
 
