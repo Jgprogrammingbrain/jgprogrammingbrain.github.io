@@ -7,7 +7,7 @@
           to="/" 
           class="text-2xl font-bold text-[#DB3DCF] hover:opacity-80 transition-opacity"
         >
-          Jin Guang - Portfolio Site
+          Jin Guang - Portfolio Site (IS216)
         </router-link>
         
         <div class="space-x-4">

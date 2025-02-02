@@ -45,6 +45,13 @@
           </p>
         </div>
 
+                <!-- Personal Description Section -->
+        <div class="max-w-4xl mx-auto text-center mb-8 px-4 animate-fadeIn">
+          <p class="text-lg text-[#D0CCE3] opacity-80 leading-relaxed">
+            This page details my learning from the module IS216 Web Application Development 2:
+          </p>
+        </div>
+
         <!-- Loading State -->
         <div v-if="loading" class="flex-1 flex items-center justify-center">
           <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-[#FF6961]"></div>
