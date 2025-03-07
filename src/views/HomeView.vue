@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen bg-[#0A0A1F] flex flex-col overflow-hidden">
+  <div class="min-h-screen bg-[#0A0A1F] flex flex-col overflow-hidden">
     <div class="h-[70px] flex-shrink-0">
     </div>
     
@@ -24,143 +24,113 @@
       </div>
     </div>
     
-    <div class="flex-1 relative overflow-hidden">
-      <div class="h-full flex flex-col items-center p-2 sm:p-4 md:p-8 text-[#D0CCE3] z-10">
+    <div class="flex-1 relative overflow-y-auto">
+      <div class="min-h-full flex flex-col items-center p-2 sm:p-4 md:p-8 text-[#D0CCE3] z-10 relative">
         <!-- Header -->
-        <div class="text-center mb-8 animate-fadeIn">
-          <span class="text-3xl sm:text-[2.5rem] lg:text-[3.5rem] mb-2 text-[#DB3DCF] font-black tracking-tight">
-          My Developer Portfolio - Jin Guang
+        <div class="text-center mb-4 sm:mb-6 md:mb-8 animate-fadeIn w-full px-2">
+          <span class="text-xl sm:text-3xl md:text-[2.5rem] lg:text-[3.5rem] text-[#DB3DCF] font-black tracking-tight leading-tight block">
+            My Developer Portfolio - Jin Guang
           </span>
         </div>
 
         <!-- Personal Description Section -->
-        <div class="max-w-4xl mx-auto text-center mb-8 px-4 animate-fadeIn">
-          <p class="text-lg text-[#D0CCE3] opacity-80 leading-relaxed">
+        <div class="w-full max-w-4xl mx-auto text-center mb-4 sm:mb-6 md:mb-8 px-3 sm:px-4 animate-fadeIn">
+          <p class="text-sm sm:text-base md:text-lg text-[#D0CCE3] opacity-80 leading-relaxed">
             Hi, my name is Jin Guang. I am a dedicated Year 3 Information Systems student from Singapore Management University (SMU), passionate about building and exploring innovative technologies. 
             I was studying computer science for my first two years of university but I find where 
             I find myself making the most impact to be towards building user-centric applications. 
-            My developer portfolio highlights my expertise in web development. With hands-on experience in programming languages like CSS, JavaScript, and frameworks such as Vue.js. 
+            My developer portfolio highlights my technical proficiency.
             I strive to create dynamic and responsive applications and I am continually expanding my skills to bridge the gap 
             between my innovative ideas and building impactful solutions.
           </p>
         </div>
 
-                <!-- Personal Description Section -->
-        <div class="max-w-4xl mx-auto text-center mb-8 px-4 animate-fadeIn">
-          <p class="text-lg text-[#D0CCE3] opacity-80 leading-relaxed">
-            This page details my learning from the module IS216 Web Application Development 2:
-          </p>
+        <!-- Resume and GitHub Buttons -->
+        <div class="w-full max-w-4xl mx-auto text-center mb-4 sm:mb-6 md:mb-8 px-4 animate-fadeIn">
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+            <a 
+              href="https://drive.google.com/file/d/1MAqSp0v3vz2q44rDQ44oDHxVIEaoYQ8u/view?usp=sharing" 
+              class="inline-block px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg font-bold bg-[#675FF2] text-white rounded-full 
+              shadow-lg shadow-[#675FF2]/30 hover:bg-[#7B74FF] hover:shadow-[#675FF2]/50 
+              transition-all duration-300 transform hover:-translate-y-1 border border-[#9F9AFF]/30"
+            >
+              View Resume →
+            </a>
+            
+            <a 
+              href="https://github.com/Jgprogrammingbrain" 
+              class="inline-block px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg font-bold bg-[#1d1d1d] text-white rounded-full 
+              shadow-lg shadow-black/30 hover:bg-[#2d2d2d] hover:shadow-black/50 
+              transition-all duration-300 transform hover:-translate-y-1 border border-gray-700/30"
+            >
+              <div class="flex items-center justify-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="inline-block">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                GitHub Profile
+              </div>
+            </a>
+          </div>
         </div>
 
         <!-- Loading State -->
         <div v-if="loading" class="flex-1 flex items-center justify-center">
-          <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-[#FF6961]"></div>
+          <div class="animate-spin rounded-full h-8 w-8 sm:h-12 sm:w-12 border-b-2 border-[#FF6961]"></div>
         </div>
 
-        <!-- Portfolio Carousel -->
-        <div class="flex-1 w-full max-w-[1600px] relative flex items-center">
-          <!-- Previous Button -->
-          <button 
-            class="absolute left-0 sm:left-2 md:left-8 z-10 w-8 sm:w-12 md:w-16 h-8 sm:h-12 md:h-16 rounded-full
-              bg-[rgba(103,95,242,0.1)] backdrop-blur-md text-white cursor-pointer transition-all
-              duration-300 disabled:opacity-0 disabled:cursor-default
-              hover:bg-[rgba(103,95,242,0.2)] hover:scale-110 group"
-            @click="prev"
-            :disabled="currentIndex === 0"
-            :class="{ 'opacity-0 pointer-events-none': currentIndex === 0 }"
-            aria-label="Previous projects"
-          >
-            <div class="flex items-center justify-center w-full h-full transition-transform duration-300 group-hover:scale-90">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M15 18l-6-6 6-6" />
-              </svg>
-            </div>
-          </button>
+        <!-- Combined Skills Section Title -->
+        <div class="w-full max-w-4xl mx-auto text-center mt-4 mb-4 px-3 sm:px-4 animate-fadeIn">
+          <h2 class="text-lg sm:text-xl md:text-2xl text-[#DB3DCF] font-bold mb-2">
+            Programming Skills & Technologies
+          </h2>
+          <p class="text-sm sm:text-base text-[#D0CCE3] opacity-80">
+            Languages and technologies I've worked with:
+          </p>
+        </div>
 
-          <!-- Portfolio Cards Container -->
+        <!-- Combined Project Cards Grid -->
+        <div 
+          class="w-full max-w-[1600px] overflow-hidden px-2 sm:px-4 md:px-12 mb-8"
+          ref="carouselRef"
+        >
           <div 
-            class="h-full w-full overflow-hidden px-2 sm:px-4 md:px-16"
-            ref="carouselRef"
+            class="flex flex-wrap justify-center"
+            :style="{ 
+              transform: `translateX(-${currentIndex * (100 / visibleProjects)}%)`,
+              transition: isAnimating ? 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)' : 'none'
+            }"
           >
+            <!-- All Project Cards -->
             <div 
-              class="h-full flex items-center"
-              :style="{ 
-                transform: `translateX(-${currentIndex * (100 / visibleProjects)}%)`,
-                transition: isAnimating ? 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)' : 'none'
-              }"
+              v-for="project in allProjects" 
+              :key="project.id"
+              :style="{ flex: `0 0 ${100 / visibleProjects}%` }"
+              class="p-2 sm:p-3 md:p-4"
             >
-              <!-- Portfolio Cards -->
               <div 
-                v-for="project in projects" 
-                :key="project.id"
-                :style="{ flex: `0 0 ${100 / visibleProjects}%` }"
-                class="h-[85%] px-2 sm:px-4 md:px-6 lg:px-8"
+                class="relative rounded-xl overflow-hidden
+                  transition-transform duration-300 ease-in-out hover:-translate-y-2 group
+                  bg-[rgba(103,95,242,0.1)] backdrop-blur-md border border-[#DB3DCF]/30 h-[200px] sm:h-[250px]"
               >
-                <div 
-                  class="h-full relative rounded-2xl cursor-pointer overflow-hidden
-                    transition-transform duration-300 ease-in-out hover:-translate-y-3 group
-                    bg-[rgba(103,95,242,0.1)] backdrop-blur-md border border-[#DB3DCF]/30"
-                  @click="navigateToProject(project.link)"
-                >
-                  <!-- Project Background Image -->
-                  <div class="absolute inset-0 bg-gradient-to-br from-[#0A0A1F] to-[#1A1A3A] opacity-80">
-                    <img 
-                      :src="project.backgroundImage" 
-                      alt="Project background" 
-                      class="absolute inset-0 w-full h-full object-cover opacity-20"
-                    />
-                  </div>
-
-                  <!-- Project Content -->
-                  <div class="relative z-20 h-full flex flex-col justify-end p-6">
-                    <h3 class="text-2xl font-bold text-white mb-4">
-                      {{ project.title }}
-                    </h3>
-                    <p class="text-[#D0CCE3] mb-6 opacity-70">
-                      {{ project.description }}
-                    </p>
-                    <div class="flex items-center justify-between">
-                      <span class="text-sm text-[#DB3DCF] font-semibold uppercase tracking-wider">
-                        View Project
-                      </span>
-                      <svg 
-                        xmlns="http://www.w3.org/2000/svg" 
-                        class="h-6 w-6 text-[#DB3DCF] transform group-hover:translate-x-1 transition-transform"
-                        fill="none" 
-                        viewBox="0 0 24 24" 
-                        stroke="currentColor"
-                      >
-                        <path 
-                          stroke-linecap="round" 
-                          stroke-linejoin="round" 
-                          stroke-width="2" 
-                          d="M14 5l7 7m0 0l-7 7m7-7H3" 
-                        />
-                      </svg>
-                    </div>
-                  </div>
+                <div class="absolute inset-0 bg-gradient-to-br from-[#0A0A1F] to-[#1A1A3A] opacity-80">
+                  <img 
+                    :src="project.backgroundImage" 
+                    alt="Project background" 
+                    class="absolute inset-0 w-full h-full object-cover opacity-20"
+                  />
+                </div>
+                <div class="relative z-20 h-full flex flex-col justify-center items-center p-4 text-center">
+                  <h3 class="text-xl font-bold text-white mb-2">{{ project.title }}</h3>
+                  <p class="text-sm text-[#D0CCE3] mb-4 opacity-70">
+                    {{ project.description }}
+                  </p>
+                  <span class="text-xs text-[#DB3DCF] font-semibold uppercase tracking-wider">
+                    {{ project.skillLevel }}
+                  </span>
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- Next Button -->
-          <button 
-            class="absolute right-0 sm:right-2 md:right-8 z-10 w-8 sm:w-12 md:w-16 h-8 sm:h-12 md:h-16 rounded-full
-              bg-[rgba(103,95,242,0.1)] backdrop-blur-md text-white cursor-pointer transition-all
-              duration-300 disabled:opacity-0 disabled:cursor-default
-              hover:bg-[rgba(103,95,242,0.2)] hover:scale-110 group"
-            @click="next"
-            :disabled="currentIndex >= projects.length - visibleProjects"
-            :class="{ 'opacity-0 pointer-events-none': currentIndex >= projects.length - visibleProjects }"
-            aria-label="Next projects"
-          >
-            <div class="flex items-center justify-center w-full h-full transition-transform duration-300 group-hover:scale-90">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 18l6-6-6-6" />
-              </svg>
-            </div>
-          </button>
         </div>
       </div>
     </div>
@@ -168,7 +138,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
@@ -211,54 +181,150 @@ const vueImage = `data:image/svg+xml;base64,${btoa(`
 </svg>
 `)}`
 
-// Projects Data
-const projects = ref([
+// Adding new icons for additional languages
+const pythonImage = `data:image/svg+xml;base64,${btoa(`
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110">
+  <path d="M55 0A55 55 0 110 55a55 55 0 0155-55z" fill="#366A96"/>
+  <path d="M55 13c-21 0-19.7 9-19.7 9l.1 9.5h20v3H26c-10 0-18 6-18 18.5S13 73 22.2 73h8.5v-9c0-8 7-15 15.5-15h19.8c7 0 12-5.5 12-12.5V22c0-6.5-5.5-9-13-9zm-11.5 5c2 0 3.5 1.5 3.5 3.5S45.5 25 43.5 25 40 23.5 40 21.5s1.5-3.5 3.5-3.5z" fill="white"/>
+  <path d="M55 97c21 0 19.7-9 19.7-9l-.1-9.5h-20v-3h29.3c10 0 18-6 18-18.5S93.5 37 84.4 37h-8.5v9c0 8-7 15-15.5 15H40.6c-7 0-12 5.5-12 12.5V88c0 6.5 5.5 9 13 9zm11.5-5c-2 0-3.5-1.5-3.5-3.5s1.5-3.5 3.5-3.5 3.5 1.5 3.5 3.5-1.5 3.5-3.5 3.5z" fill="white"/>
+</svg>
+`)}`
+
+const phpImage = `data:image/svg+xml;base64,${btoa(`
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="50" fill="#777BB3"/>
+  <text 
+    x="50" 
+    y="65" 
+    text-anchor="middle" 
+    font-size="50" 
+    font-weight="bold" 
+    fill="white"
+  >
+    PHP
+  </text>
+</svg>
+`)}`
+
+const vbaImage = `data:image/svg+xml;base64,${btoa(`
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" fill="#217346"/>
+  <text 
+    x="50" 
+    y="65" 
+    text-anchor="middle" 
+    font-size="40" 
+    font-weight="bold" 
+    fill="white"
+  >
+    VBA
+  </text>
+</svg>
+`)}`
+
+const sqlImage = `data:image/svg+xml;base64,${btoa(`
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="50" fill="#F29111"/>
+  <text 
+    x="50" 
+    y="65" 
+    text-anchor="middle" 
+    font-size="40" 
+    font-weight="bold" 
+    fill="white"
+  >
+    SQL
+  </text>
+</svg>
+`)}`
+
+// Combine all projects into a single array
+const allProjects = ref([
 {
   id: 1,
   title: 'CSS',
-  description: 'A collection of CSS techniques and responsive designs using Bootstrap',
-  link: '/css',
+  description: 'Created modern and flexible layouts using CSS, Tailwind, and Bootstrap in coursework and real-world projects.',
+  skillLevel: 'Advanced',
   backgroundImage: cssImage
 },
 {
   id: 2,
   title: 'JavaScript',
-  description: 'Basic JavaScript structures and interactive demos',
-  link: '/javascript',
+  description: 'Built interactive web applications using JavaScript in hackathons and coursework.',
+  skillLevel: 'Advanced',
   backgroundImage: jsImage
 },
 {
   id: 3,
+  title: 'VBA',
+  description: 'Automated tasks and streamlined workflows using Visual Basic for Applications (VBA) in real-world settings.',
+  skillLevel: 'Advanced',
+  backgroundImage: vbaImage
+},
+{
+  id: 4,
+  title: 'Python',
+  description: 'Developed backend systems and scalable web applications using Python and Flask in hackathons and coursework.',
+  skillLevel: 'Advanced',
+  backgroundImage: pythonImage
+},
+{
+  id: 5,
+  title: 'PHP',
+  description: 'Built websites and integrated backend functionality using PHP in coursework.',
+  skillLevel: 'Intermediate',
+  backgroundImage: phpImage
+},
+{
+  id: 6,
   title: 'Vue',
-  description: 'Reusable Vue components and advanced state management examples',
-  link: '/vue',
+  description: 'Developed reusable components and built dynamic web applications using Vue in personal projects and coursework.',
+  skillLevel: 'Intermediate',
   backgroundImage: vueImage
+},
+{
+  id: 7,
+  title: 'SQL',
+  description: 'Designed efficient database structures and executed advanced queries using SQL in coursework.',
+  skillLevel: 'Advanced',
+  backgroundImage: sqlImage
 }
 ])
 
-// Carousel functionality remains the same as in previous version
+// Improved updateVisibleProjects function with more breakpoints
 const updateVisibleProjects = () => {
   if (!carouselRef.value) return
   
   const width = window.innerWidth
   
-  if (width < 768) {
+  if (width < 640) {
+    // Mobile: show 1 project
     visibleProjects.value = 1
   } else if (width < 1024) {
+    // Tablet: show 2 projects
     visibleProjects.value = 2
+  } else if (width < 1280) {
+    // Small desktop: show 3 projects
+    visibleProjects.value = 3
   } else {
-    visibleProjects.value = 3 
+    // Large desktop: show 4 projects
+    visibleProjects.value = 4
   }
   
-  if (currentIndex.value > projects.value.length - visibleProjects.value) {
-    currentIndex.value = Math.max(0, projects.value.length - visibleProjects.value)
+  // Ensure we don't have an invalid index when resizing
+  if (currentIndex.value > allProjects.value.length - visibleProjects.value) {
+    currentIndex.value = Math.max(0, allProjects.value.length - visibleProjects.value)
   }
 }
 
 const next = () => {
-  if (currentIndex.value < projects.value.length - visibleProjects.value) {
+  if (currentIndex.value < allProjects.value.length - visibleProjects.value) {
     isAnimating.value = true
     currentIndex.value++
+    // Reset animation state after transition completes
+    setTimeout(() => {
+      isAnimating.value = false
+    }, 500)
   }
 }
 
@@ -266,11 +332,11 @@ const prev = () => {
   if (currentIndex.value > 0) {
     isAnimating.value = true
     currentIndex.value--
+    // Reset animation state after transition completes
+    setTimeout(() => {
+      isAnimating.value = false
+    }, 500)
   }
-}
-
-const navigateToProject = (link) => {
-  router.push(link)
 }
 
 const debounce = (fn, delay) => {
@@ -281,13 +347,15 @@ const debounce = (fn, delay) => {
   }
 }
 
+const debouncedResize = debounce(updateVisibleProjects, 250)
+
 onMounted(() => {
   updateVisibleProjects()
-  window.addEventListener('resize', debounce(updateVisibleProjects, 250))
+  window.addEventListener('resize', debouncedResize)
 })
 
 onUnmounted(() => {
-  window.removeEventListener('resize', debounce(updateVisibleProjects, 250))
+  window.removeEventListener('resize', debouncedResize)
 })
 </script>
 
