@@ -45,11 +45,9 @@
         <div class="w-full max-w-4xl mx-auto text-center mb-4 sm:mb-6 md:mb-8 px-3 sm:px-4 animate-fadeIn">
           <p class="text-sm sm:text-base md:text-lg text-[#D0CCE3] opacity-80 leading-relaxed">
             Hi, my name is Jin Guang. I am a dedicated Year 3 Information Systems student from Singapore Management University (SMU), passionate about building and exploring innovative technologies.
-            I specialise in Smart City Management - a major focused on integrating technology to traditional processes to create sustainable and efficient solutions. 
-            I was studying computer science for my first two years of university but I find where 
-            I find myself making the most impact to be towards building user-centric applications. 
-            I continuously strive to keep up to date with the latest technologies and expand my technical skills, to bridge the gap 
-            between my innovative ideas and building impactful solutions.
+            I specialise in Smart City Management - a major focused on integrating technology to traditional processes to create sustainable and efficient solutions.
+            I continuously strive to keep up-to-date with the latest technologies and expand my technical skills, to bridge the gap 
+            between ideation and the development of impactful solutions.
           </p>
         </div>
 
@@ -251,7 +249,7 @@ const allProjects = ref([
 {
   id: 1,
   title: 'CSS',
-  description: 'Created modern and flexible layouts using CSS, Tailwind, and Bootstrap in coursework and real-world projects.',
+  description: 'Created modern and flexible layouts using CSS, Tailwind, and Bootstrap in coursework and real-world settings.',
   skillLevel: 'Advanced',
   backgroundImage: cssImage
 },
@@ -263,17 +261,24 @@ const allProjects = ref([
   backgroundImage: jsImage
 },
 {
-  id: 3,
-  title: 'VBA',
-  description: 'Automated tasks and streamlined workflows using Visual Basic for Applications (VBA) in real-world settings.',
+  id: 7,
+  title: 'SQL',
+  description: 'Designed efficient database structures and executed advanced queries using SQL in coursework and real-world settings.',
   skillLevel: 'Advanced',
-  backgroundImage: vbaImage
+  backgroundImage: sqlImage
+},
+{
+  id: 3,
+  title: 'Vue',
+  description: 'Developed reusable components and built dynamic web applications using Vue in personal projects and coursework.',
+  skillLevel: 'Intermediate',
+  backgroundImage: vueImage
 },
 {
   id: 4,
   title: 'Python',
-  description: 'Developed backend systems and scalable web applications using Python and Flask in hackathons and coursework.',
-  skillLevel: 'Advanced',
+  description: 'Developed backend systems and scalable web applications using frameworks such as Flask in hackathons and coursework.',
+  skillLevel: 'Intermediate',
   backgroundImage: pythonImage
 },
 {
@@ -285,17 +290,10 @@ const allProjects = ref([
 },
 {
   id: 6,
-  title: 'Vue',
-  description: 'Developed reusable components and built dynamic web applications using Vue in personal projects and coursework.',
+  title: 'VBA',
+  description: 'Automated tasks and streamlined workflows using Visual Basic for Applications (VBA) in real-world settings.',
   skillLevel: 'Intermediate',
-  backgroundImage: vueImage
-},
-{
-  id: 7,
-  title: 'SQL',
-  description: 'Designed efficient database structures and executed advanced queries using SQL in coursework.',
-  skillLevel: 'Advanced',
-  backgroundImage: sqlImage
+  backgroundImage: vbaImage
 }
 ])
 
