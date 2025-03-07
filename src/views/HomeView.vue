@@ -92,7 +92,7 @@
             Programming Skills & Technologies
           </h2>
           <p class="text-sm sm:text-base text-[#D0CCE3] opacity-80">
-            Languages and technologies I've worked with:
+            Languages and frameworks I've worked with:
           </p>
         </div>
 
