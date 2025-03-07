@@ -27,11 +27,19 @@
     <div class="flex-1 relative overflow-y-auto">
       <div class="min-h-full flex flex-col items-center p-2 sm:p-4 md:p-8 text-[#D0CCE3] z-10 relative">
         <!-- Header -->
+        <div class="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full overflow-hidden mb-4 md:mb-0 border-4 border-[#DB3DCF] shadow-lg shadow-[#DB3DCF]/30 flex-shrink-0">
+            <img 
+              src="/src/assets/personal.jpg" 
+              alt="Jin Guang" 
+              class="w-full h-full object-cover"
+              @error="handleImageError" 
+            />
+          </div>
         <div class="text-center mb-4 sm:mb-6 md:mb-8 animate-fadeIn w-full px-2">
-          <span class="text-xl sm:text-3xl md:text-[2.5rem] lg:text-[3.5rem] text-[#DB3DCF] font-black tracking-tight leading-tight block">
-            My Developer Portfolio - Jin Guang
-          </span>
-        </div>
+  <span class="text-lg sm:text-2xl md:text-3xl lg:text-4xl text-[#DB3DCF] font-bold tracking-tight leading-tight block">
+    Developer Portfolio - Han Jin Guang
+  </span>
+</div>
 
         <!-- Personal Description Section -->
         <div class="w-full max-w-4xl mx-auto text-center mb-4 sm:mb-6 md:mb-8 px-3 sm:px-4 animate-fadeIn">
