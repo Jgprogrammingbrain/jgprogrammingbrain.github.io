@@ -44,7 +44,7 @@
         <!-- Personal Description Section -->
         <div class="w-full max-w-4xl mx-auto text-center mb-4 sm:mb-6 md:mb-8 px-3 sm:px-4 animate-fadeIn">
           <p class="text-sm sm:text-base md:text-lg text-[#D0CCE3] opacity-80 leading-relaxed">
-            Hi, my name is Jin Guang. I am a dedicated Year 3 Information Systems student from Singapore Management University (SMU), passionate about building and exploring innovative technologies.
+            Hi, my name is Jin Guang. I am a dedicated Year 3 Information Systems student from Singapore Management University (SMU), passionate about exploring and building innovative technologies.
             I specialise in Smart City Management - a major focused on integrating technology to traditional processes to create sustainable and efficient solutions.
             I continuously strive to keep up-to-date with the latest technologies and expand my technical skills, to bridge the gap 
             between ideation and the development of impactful solutions.
