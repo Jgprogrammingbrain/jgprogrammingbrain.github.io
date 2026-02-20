@@ -130,9 +130,6 @@
                   <p class="text-sm text-[#D0CCE3] mb-4 opacity-70">
                     {{ project.description }}
                   </p>
-                  <span class="text-xs text-[#DB3DCF] font-semibold uppercase tracking-wider">
-                    {{ project.skillLevel }}
-                  </span>
                 </div>
               </div>
             </div>
