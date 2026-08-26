@@ -55,7 +55,7 @@
         <div class="w-full max-w-4xl mx-auto text-center mb-4 sm:mb-6 md:mb-8 px-4 animate-fadeIn">
           <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <a 
-              href="https://drive.google.com/file/d/1wa8KNrmJ-kYx0MsDNT0Ycipv3j_tmmcI/view?usp=sharing" 
+              href="https://drive.google.com/file/d/1Scp9UG3OP8xa_Ng203kOwc4wRLnAkyxg/view?usp=sharing" 
               class="inline-block px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg font-bold bg-[#675FF2] text-white rounded-full 
               shadow-lg shadow-[#675FF2]/30 hover:bg-[#7B74FF] hover:shadow-[#675FF2]/50 
               transition-all duration-300 transform hover:-translate-y-1 border border-[#9F9AFF]/30"
